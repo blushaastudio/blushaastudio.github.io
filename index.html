@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BLUSHAA Studio — Digital Products, Creative Content & Original Music</title>
+<title>BLUSHAA Studio — Premium Digital Products Marketplace</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -36,9 +36,7 @@
   }
 
   *{ margin:0; padding:0; box-sizing:border-box; }
-
   html{ scroll-behavior:smooth; }
-
   body{
     font-family: var(--font-body);
     background: var(--ivory);
@@ -47,30 +45,18 @@
     overflow-x: hidden;
     line-height: 1.5;
   }
-
   img, svg{ display:block; max-width:100%; }
-
   a{ color:inherit; text-decoration:none; }
   ul{ list-style:none; }
   button{ font-family:inherit; cursor:pointer; border:none; background:none; }
-
   ::selection{ background: var(--dusty); color: var(--charcoal); }
-
   .wrap{ max-width: var(--container); margin: 0 auto; padding-left: var(--pad); padding-right: var(--pad); }
 
   /* ---------- Typography helpers ---------- */
   .eyebrow{
-    font-family: var(--font-body);
-    font-weight: 700;
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--mocha);
+    font-family: var(--font-body); font-weight: 700; font-size: 0.72rem;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--mocha);
   }
-  .display{ font-family: var(--font-display); font-weight: 500; }
-  .squiggle{ position:relative; display:inline-block; }
-  .squiggle svg{ position:absolute; left:0; bottom:-0.14em; width:100%; height:0.3em; }
-
   h1,h2,h3{ font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; color: var(--charcoal); }
 
   .section-head{ max-width: 640px; margin-bottom: 56px; }
@@ -84,23 +70,14 @@
 
   /* ---------- Buttons ---------- */
   .btn{
-    display:inline-flex; align-items:center; gap:8px;
-    padding: 14px 28px;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 0.92rem;
+    display:inline-flex; align-items:center; gap:8px; padding: 14px 28px; border-radius: 999px;
+    font-weight: 600; font-size: 0.92rem;
     transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, background .35s ease, color .35s ease;
     white-space: nowrap;
   }
-  .btn-primary{
-    background: var(--charcoal); color: var(--ivory);
-    box-shadow: var(--shadow-soft);
-  }
+  .btn-primary{ background: var(--charcoal); color: var(--ivory); box-shadow: var(--shadow-soft); }
   .btn-primary:hover{ transform: translateY(-3px); box-shadow: var(--shadow-hover); }
-  .btn-ghost{
-    background: transparent; color: var(--charcoal);
-    border: 1.5px solid rgba(46,46,46,0.18);
-  }
+  .btn-ghost{ background: transparent; color: var(--charcoal); border: 1.5px solid rgba(46,46,46,0.18); }
   .btn-ghost:hover{ border-color: var(--charcoal); transform: translateY(-3px); background: rgba(255,255,255,0.5); }
   .btn-line{
     padding: 0; border-radius:0; border-bottom: 1.5px solid var(--charcoal);
@@ -112,21 +89,19 @@
   /* ---------- Nav ---------- */
   .nav{
     position: fixed; top:0; left:0; right:0; z-index: 100;
-    padding: 22px var(--pad);
+    padding: 20px var(--pad);
     display:flex; align-items:center; justify-content:space-between;
     transition: background .4s ease, padding .4s ease, box-shadow .4s ease, backdrop-filter .4s ease;
   }
   .nav.scrolled{
-    background: rgba(252,250,247,0.82);
-    backdrop-filter: blur(14px);
-    padding-top: 14px; padding-bottom: 14px;
-    box-shadow: 0 1px 0 rgba(46,46,46,0.06);
+    background: rgba(252,250,247,0.85); backdrop-filter: blur(14px);
+    padding-top: 13px; padding-bottom: 13px; box-shadow: 0 1px 0 rgba(46,46,46,0.06);
   }
-  .nav-logo{ font-family: var(--font-display); font-size: 1.35rem; font-weight:600; letter-spacing: 0.01em; }
-  .nav-links{ display:flex; gap: 36px; }
+  .nav-logo{ font-family: var(--font-display); font-size: 1.3rem; font-weight:600; letter-spacing: 0.01em; flex-shrink:0; }
+  .nav-links{ display:flex; gap: 24px; }
   .nav-links a{
-    font-size: 0.86rem; font-weight:600; letter-spacing:0.02em; color: var(--ink-soft);
-    position:relative; padding-bottom:4px;
+    font-size: 0.82rem; font-weight:600; letter-spacing:0.01em; color: var(--ink-soft);
+    position:relative; padding-bottom:4px; display:inline-flex; align-items:center; gap:4px; white-space:nowrap;
   }
   .nav-links a::after{
     content:""; position:absolute; left:0; bottom:0; width:0; height:1.5px; background: var(--mocha);
@@ -134,10 +109,11 @@
   }
   .nav-links a:hover{ color: var(--charcoal); }
   .nav-links a:hover::after{ width:100%; }
-  .nav-right{ display:flex; align-items:center; gap:22px; }
+  .nav-links a svg{ width:11px; height:11px; opacity:0.55; }
+  .nav-right{ display:flex; align-items:center; gap:18px; flex-shrink:0; }
   .nav-cta{
     background: var(--charcoal); color: var(--ivory); padding: 11px 22px; border-radius:999px;
-    font-size: 0.82rem; font-weight:700;
+    font-size: 0.8rem; font-weight:700; white-space:nowrap;
     transition: transform .3s ease, box-shadow .3s ease;
   }
   .nav-cta:hover{ transform: translateY(-2px); box-shadow: var(--shadow-soft); }
@@ -152,147 +128,118 @@
 
   .mobile-menu{
     position: fixed; inset:0; background: var(--cream); z-index:99;
-    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px;
     transform: translateY(-100%); transition: transform .5s cubic-bezier(.6,0,.2,1);
   }
   .mobile-menu.open{ transform: translateY(0); }
-  .mobile-menu a{ font-family: var(--font-display); font-size: 2rem; }
+  .mobile-menu a{ font-family: var(--font-display); font-size: 1.7rem; }
 
   /* ---------- Hero ---------- */
   .hero{
-    min-height: 100vh;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    text-align:center;
-    padding: 160px var(--pad) 100px;
-    overflow:hidden;
+    min-height: 100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding: 160px var(--pad) 100px; overflow:hidden;
   }
-  .orb{
-    position:absolute; border-radius:50%; filter: blur(70px); opacity:0.55;
-    animation: float 16s ease-in-out infinite;
-    z-index:0;
-  }
+  .orb{ position:absolute; border-radius:50%; filter: blur(70px); opacity:0.55; animation: float 16s ease-in-out infinite; z-index:0; }
   .orb1{ width:420px; height:420px; background: var(--blush); top:-120px; left:-100px; }
   .orb2{ width:360px; height:360px; background: var(--sage); bottom:-140px; right:-80px; animation-delay: -6s; }
   .orb3{ width:260px; height:260px; background: var(--gold); top:30%; right:8%; opacity:0.35; animation-delay: -11s; }
-  @keyframes float{
-    0%,100%{ transform: translate(0,0) scale(1); }
-    50%{ transform: translate(30px,-24px) scale(1.06); }
-  }
+  @keyframes float{ 0%,100%{ transform: translate(0,0) scale(1); } 50%{ transform: translate(30px,-24px) scale(1.06); } }
 
   .hero-content{ position:relative; z-index:2; max-width: 760px; }
   .hero .eyebrow{ margin-bottom: 22px; }
-  .hero h1{
-    font-size: clamp(2.8rem, 8vw, 5.4rem);
-    line-height: 0.98;
-    margin-bottom: 26px;
-  }
+  .hero h1{ font-size: clamp(2.8rem, 8vw, 5.4rem); line-height: 0.98; margin-bottom: 26px; }
   .hero h1 em{ font-style: italic; color: var(--mocha); font-weight:400; }
-  .hero-desc{
-    font-size: clamp(1rem, 1.6vw, 1.18rem);
-    color: var(--ink-soft);
-    max-width: 520px;
-    margin: 0 auto 42px;
-  }
+  .hero-desc{ font-size: clamp(1rem, 1.6vw, 1.18rem); color: var(--ink-soft); max-width: 520px; margin: 0 auto 42px; }
   .hero-buttons{ display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
 
-  .hero-collage{
-    position:relative; z-index:1; margin-top: 90px;
-    display:flex; gap: 22px; justify-content:center;
-  }
+  .hero-collage{ position:relative; z-index:1; margin-top: 90px; display:flex; gap: 22px; justify-content:center; }
   .peek-card{
-    width: 168px; height: 218px; border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
-    display:flex; align-items:center; justify-content:center;
-    position:relative;
-    transition: transform .5s cubic-bezier(.2,.8,.2,1);
+    width: 168px; height: 218px; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);
+    display:flex; align-items:center; justify-content:center; position:relative;
+    transition: transform .5s cubic-bezier(.2,.8,.2,1); overflow:hidden;
+  }
+  .peek-card::before{
+    content:""; position:absolute; inset:0; opacity:0.5;
+    background-image: radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px);
+    background-size: 14px 14px; mix-blend-mode: overlay;
   }
   .peek-card:nth-child(1){ transform: rotate(-7deg) translateY(14px); }
   .peek-card:nth-child(2){ transform: rotate(2deg) translateY(-10px); z-index:2; }
   .peek-card:nth-child(3){ transform: rotate(8deg) translateY(18px); }
   .peek-card:hover{ transform: translateY(-10px) rotate(0deg) scale(1.04); }
-  .peek-card svg{ width:44px; height:44px; opacity:0.5; }
+  .peek-card svg{ width:38px; height:38px; opacity:0.45; position:relative; z-index:1; }
 
   @media (max-width: 640px){ .hero-collage{ display:none; } }
 
   /* ---------- Marquee ---------- */
-  .marquee{
-    border-top: 1px solid rgba(46,46,46,0.08);
-    border-bottom: 1px solid rgba(46,46,46,0.08);
-    padding: 22px 0;
-    overflow:hidden;
-    white-space:nowrap;
-  }
+  .marquee{ border-top: 1px solid rgba(46,46,46,0.08); border-bottom: 1px solid rgba(46,46,46,0.08); padding: 22px 0; overflow:hidden; white-space:nowrap; }
   .marquee-track{ display:inline-flex; gap: 48px; animation: scroll 32s linear infinite; }
-  .marquee span{
-    font-family: var(--font-display); font-style:italic; font-size: 1.3rem; color: var(--mocha);
-    display:inline-flex; align-items:center; gap:48px;
-  }
+  .marquee span{ font-family: var(--font-display); font-style:italic; font-size: 1.3rem; color: var(--mocha); display:inline-flex; align-items:center; gap:48px; }
   .marquee span::after{ content:"·"; color: var(--dusty); font-style:normal; margin-left:48px; }
   @keyframes scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
 
-  /* ---------- Product cards ---------- */
-  .grid{
-    display:grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
-  }
+  /* ---------- Product cards (marketplace style) ---------- */
+  .grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
   .card{
-    background: var(--cream);
-    border-radius: var(--radius-lg);
-    overflow:hidden;
-    box-shadow: var(--shadow-soft);
-    transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease;
+    background: var(--cream); border-radius: var(--radius-lg); overflow:hidden;
+    box-shadow: var(--shadow-soft); transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease;
     display:flex; flex-direction:column;
   }
   .card:hover{ transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+
+  /* Large replaceable preview image placeholder */
   .card-preview{
-    aspect-ratio: 4/3.1; position:relative; display:flex; align-items:center; justify-content:center;
-    overflow:hidden;
+    aspect-ratio: 4/3.3; position:relative; overflow:hidden;
+    background: linear-gradient(150deg, var(--card-a, var(--blush)), var(--card-b, var(--cream)));
+    display:flex; align-items:center; justify-content:center;
   }
   .card-preview::before{
-    content:""; position:absolute; inset:0; opacity:0.65;
+    content:""; position:absolute; inset:0; opacity:0.55;
     background-image: radial-gradient(rgba(255,255,255,0.55) 1px, transparent 1px);
-    background-size: 14px 14px;
-    mix-blend-mode: overlay;
+    background-size: 14px 14px; mix-blend-mode: overlay;
   }
-  .card-preview svg{ width:64px; height:64px; position:relative; z-index:1; transition: transform .5s ease; }
-  .card:hover .card-preview svg{ transform: scale(1.1) translateY(-4px); }
+  .placeholder-icon{
+    width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:10px; position:relative; z-index:1; transition: transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+  .placeholder-icon svg{ width:52px; height:52px; color: rgba(46,46,46,0.32); }
+  .placeholder-icon span{ font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color: rgba(46,46,46,0.38); }
+  .card:hover .placeholder-icon{ transform: scale(1.06); }
   .card-tag{
-    position:absolute; top:16px; left:16px; background: rgba(255,255,255,0.85);
-    padding: 6px 14px; border-radius:999px; font-size:0.68rem; font-weight:700;
-    letter-spacing:0.08em; text-transform:uppercase; color: var(--mocha); z-index:2;
+    position:absolute; top:16px; left:16px; background: rgba(255,255,255,0.88); padding: 6px 14px;
+    border-radius:999px; font-size:0.66rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+    color: var(--mocha); z-index:2;
   }
   .card-tag.new{ background: var(--charcoal); color: var(--ivory); }
   .card-rank{
-    position:absolute; top:14px; right:16px; font-family: var(--font-display); font-style:italic;
-    font-size:2.2rem; color: rgba(255,255,255,0.85); z-index:2;
+    position:absolute; top:12px; right:16px; font-family: var(--font-display); font-style:italic;
+    font-size:2.2rem; color: rgba(255,255,255,0.9); z-index:2;
   }
-  .card-body{ padding: 26px 26px 28px; display:flex; flex-direction:column; gap:10px; flex:1; }
-  .card-cat{ font-size:0.7rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color: var(--mocha); }
-  .card-body h3{ font-size:1.28rem; line-height:1.25; }
-  .card-body p{ color: var(--ink-soft); font-size:0.92rem; flex:1; }
-  .card-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:8px; }
-  .card-price{ font-weight:700; font-size:0.95rem; }
-  .card-dl{
-    display:flex; align-items:center; gap:6px; font-size:0.82rem; font-weight:700;
-    padding:9px 16px; border-radius:999px; border:1.5px solid rgba(46,46,46,0.15);
-    transition: all .3s ease;
+  .card-body{ padding: 24px 24px 26px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .card-cat{ font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color: var(--mocha); }
+  .card-body h3{ font-size:1.22rem; line-height:1.25; }
+  .card-body p{ color: var(--ink-soft); font-size:0.9rem; flex:1; }
+  .card-price{ font-weight:700; font-size:0.92rem; color: var(--charcoal); margin-top:2px; }
+  .card-price span{ font-weight:500; color: var(--ink-soft); font-size:0.82rem; }
+  .card-foot{ margin-top:10px; }
+  .buy-now{
+    display:flex; align-items:center; justify-content:center; gap:6px; width:100%;
+    padding:13px 16px; border-radius:999px; font-weight:700; font-size:0.85rem;
+    background: var(--charcoal); color: var(--ivory);
+    transition: all .35s ease;
   }
-  .card-dl:hover{ background: var(--charcoal); color: var(--ivory); border-color: var(--charcoal); }
+  .buy-now:hover{ background: var(--mocha); transform: translateY(-2px); box-shadow: var(--shadow-soft); }
 
   @media (max-width: 980px){ .grid{ grid-template-columns: repeat(2,1fr); } }
   @media (max-width: 620px){ .grid{ grid-template-columns: 1fr; } }
 
   .band{ padding: 120px var(--pad); }
   .band.tight{ padding-top: 90px; padding-bottom: 90px; }
-
   .section-foot{ display:flex; justify-content:center; margin-top:52px; }
 
   /* ---------- Why choose ---------- */
-  .why{
-    background: linear-gradient(180deg, var(--blush) 0%, var(--cream) 100%);
-  }
-  .why-grid{
-    display:grid; grid-template-columns: repeat(3,1fr); gap: 34px 40px; max-width: var(--container); margin:0 auto;
-  }
+  .why{ background: linear-gradient(180deg, var(--blush) 0%, var(--cream) 100%); }
+  .why-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 34px 40px; max-width: var(--container); margin:0 auto; }
   .why-item{ display:flex; gap:16px; align-items:flex-start; }
   .why-item svg{ width:26px; height:26px; flex-shrink:0; margin-top:2px; color: var(--mocha); }
   .why-item h4{ font-family: var(--font-body); font-weight:700; font-size:1rem; margin-bottom:4px; }
@@ -303,23 +250,20 @@
   /* ---------- Categories ---------- */
   .cat-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:20px; }
   .cat-card{
-    background: var(--ivory); border: 1px solid rgba(46,46,46,0.08);
-    border-radius: var(--radius-md); padding: 30px 22px; text-align:center;
-    transition: all .4s ease; cursor:pointer;
+    background: var(--ivory); border: 1px solid rgba(46,46,46,0.08); border-radius: var(--radius-md);
+    padding: 30px 22px; text-align:center; transition: all .4s ease; cursor:pointer;
   }
   .cat-card:hover{ background: var(--charcoal); border-color: var(--charcoal); transform: translateY(-6px); }
-  .cat-card svg{ width:32px; height:32px; margin:0 auto 16px; color: var(--mocha); transition: color .4s ease; }
+  .cat-card svg{ width:30px; height:30px; margin:0 auto 16px; color: var(--mocha); transition: color .4s ease; }
   .cat-card:hover svg{ color: var(--gold); }
-  .cat-card span{ font-weight:700; font-size:0.88rem; transition: color .4s ease; }
+  .cat-card span{ font-weight:700; font-size:0.86rem; transition: color .4s ease; }
   .cat-card:hover span{ color: var(--ivory); }
   @media (max-width:900px){ .cat-grid{ grid-template-columns: repeat(2,1fr); } }
 
   /* ---------- About ---------- */
   .about{ display:grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items:center; }
   .about-visual{ position:relative; aspect-ratio: 1/1.05; }
-  .about-block{
-    position:absolute; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);
-  }
+  .ab-block{ position:absolute; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
   .ab1{ width:72%; height:72%; top:0; left:0; background: linear-gradient(150deg, var(--dusty), var(--blush)); }
   .ab2{ width:52%; height:52%; bottom:0; right:0; background: linear-gradient(150deg, var(--sage), var(--cream)); border: 6px solid var(--ivory); }
   .ab-quote{
@@ -345,10 +289,7 @@
     aspect-ratio: 16/10; position:relative; display:flex; align-items:center; justify-content:center;
     background: linear-gradient(135deg, rgba(216,194,154,0.25), rgba(233,184,203,0.15));
   }
-  .play-btn{
-    width:56px; height:56px; border-radius:50%; background: rgba(252,250,247,0.92);
-    display:flex; align-items:center; justify-content:center; transition: transform .3s ease;
-  }
+  .play-btn{ width:56px; height:56px; border-radius:50%; background: rgba(252,250,247,0.92); display:flex; align-items:center; justify-content:center; transition: transform .3s ease; }
   .yt-card:hover .play-btn{ transform: scale(1.12); }
   .play-btn svg{ width:18px; height:18px; margin-left:3px; color: var(--charcoal); }
   .yt-info{ padding: 18px 20px 22px; }
@@ -370,9 +311,7 @@
   .bars span:nth-child(6){ animation-delay:-0.5s; } .bars span:nth-child(7){ animation-delay:-0.9s; }
   @keyframes bar{ 0%,100%{ height:16px; } 50%{ height:64px; } }
   .track-list{ display:flex; flex-direction:column; }
-  .track{
-    display:flex; align-items:center; gap:18px; padding: 18px 0; border-bottom: 1px solid rgba(46,46,46,0.1);
-  }
+  .track{ display:flex; align-items:center; gap:18px; padding: 18px 0; border-bottom: 1px solid rgba(46,46,46,0.1); }
   .track-num{ font-family: var(--font-display); font-style:italic; color: var(--mocha); width:28px; }
   .track-name{ flex:1; }
   .track-name strong{ display:block; font-size:1rem; }
@@ -383,32 +322,37 @@
   /* ---------- FAQ ---------- */
   .faq-list{ max-width: 780px; margin:0 auto; }
   .faq-item{ border-bottom: 1px solid rgba(46,46,46,0.12); }
-  .faq-q{
-    width:100%; display:flex; justify-content:space-between; align-items:center; text-align:left;
-    padding: 26px 4px; font-family: var(--font-display); font-size:1.12rem;
-  }
+  .faq-q{ width:100%; display:flex; justify-content:space-between; align-items:center; text-align:left; padding: 26px 4px; font-family: var(--font-display); font-size:1.12rem; }
   .faq-q svg{ width:18px; height:18px; flex-shrink:0; transition: transform .4s ease; color: var(--mocha); }
   .faq-item.open .faq-q svg{ transform: rotate(45deg); }
   .faq-a{ max-height:0; overflow:hidden; transition: max-height .4s ease; }
   .faq-a p{ padding: 0 4px 26px; color: var(--ink-soft); max-width:640px; }
 
-  /* ---------- Newsletter ---------- */
-  .newsletter-card{
-    max-width: 720px; margin: 0 auto; text-align:center;
-    background: var(--ivory); border: 1.5px solid var(--gold);
-    border-radius: var(--radius-lg); padding: clamp(40px,6vw,64px);
-    position:relative;
+  /* ---------- Contact ---------- */
+  .contact-inner{ display:grid; grid-template-columns: 1fr 1fr; gap:70px; align-items:center; }
+  .contact-social{ display:flex; gap:14px; margin-top:26px; }
+  .contact-social a{
+    width:40px; height:40px; border-radius:50%; border:1.5px solid rgba(46,46,46,0.18);
+    display:flex; align-items:center; justify-content:center; transition: all .3s ease; color: var(--charcoal);
   }
-  .newsletter-card h2{ font-size: clamp(1.7rem,3vw,2.3rem); margin-bottom:14px; }
-  .newsletter-card p{ color: var(--ink-soft); margin-bottom:30px; }
-  .nl-form{ display:flex; gap:10px; max-width:420px; margin:0 auto; }
+  .contact-social a:hover{ background: var(--charcoal); border-color: var(--charcoal); color: var(--ivory); transform: translateY(-3px); }
+  @media (max-width:860px){ .contact-inner{ grid-template-columns:1fr; gap:50px; } }
+
+  /* ---------- Newsletter card ---------- */
+  .newsletter-card{
+    background: var(--ivory); border: 1.5px solid var(--gold); border-radius: var(--radius-lg);
+    padding: clamp(36px,5vw,52px); position:relative;
+  }
+  .newsletter-card h2{ font-size: clamp(1.4rem,2.4vw,1.9rem); margin-bottom:12px; }
+  .newsletter-card p{ color: var(--ink-soft); margin-bottom:26px; font-size:0.94rem; }
+  .nl-form{ display:flex; gap:10px; }
   .nl-form input{
     flex:1; padding: 14px 20px; border-radius:999px; border:1.5px solid rgba(46,46,46,0.15);
     font-family:inherit; font-size:0.92rem; background:var(--cream);
   }
   .nl-form input:focus{ outline:2px solid var(--mocha); outline-offset:2px; }
   .nl-note{ font-size:0.76rem; color: var(--ink-soft); margin-top:14px; }
-  @media (max-width:520px){ .nl-form{ flex-direction:column; } }
+  @media (max-width:480px){ .nl-form{ flex-direction:column; } }
 
   /* ---------- Footer ---------- */
   footer{ background: var(--charcoal); color: rgba(252,250,247,0.75); padding: 80px var(--pad) 30px; }
@@ -436,9 +380,11 @@
   .reveal{ opacity:0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
   .reveal.visible{ opacity:1; transform:none; }
 
-  @media (max-width: 860px){
+  @media (max-width: 1060px){
     .nav-links, .nav-cta{ display:none; }
     .nav-toggle{ display:block; }
+  }
+  @media (max-width: 860px){
     .grid{ gap:20px; }
     .band{ padding: 90px var(--pad); }
   }
@@ -451,30 +397,37 @@
 </head>
 <body>
 
+<!-- Reusable placeholder image icon used across all product previews.
+     Swap the surrounding .card-preview background / this block for a real <img> when you have final product photos. -->
+
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <a href="#hero" class="nav-logo">BLUSHAA</a>
   <nav class="nav-links">
-    <a href="#products">Products</a>
-    <a href="#new">New</a>
+    <a href="#hero">Home</a>
+    <a href="#products">Shop</a>
+    <a href="#new">New Arrivals</a>
+    <a href="https://www.youtube.com/@blushaatips" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.youtube.com/channel/UCkgVsKNEY5GvboG-FAy8Lxw" target="_blank" rel="noopener">Music</a>
     <a href="#about">About</a>
-    <a href="#youtube">YouTube</a>
-    <a href="#music">Music</a>
     <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
   </nav>
   <div class="nav-right">
-    <a href="#products" class="nav-cta">Explore Products</a>
+    <a href="#products" class="nav-cta">Shop Now</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#products">Products</a>
-  <a href="#new">New</a>
+  <a href="#hero">Home</a>
+  <a href="#products">Shop</a>
+  <a href="#new">New Arrivals</a>
+  <a href="https://www.youtube.com/@blushaatips" target="_blank" rel="noopener">YouTube</a>
+  <a href="https://www.youtube.com/channel/UCkgVsKNEY5GvboG-FAy8Lxw" target="_blank" rel="noopener">Music</a>
   <a href="#about">About</a>
-  <a href="#youtube">YouTube</a>
-  <a href="#music">Music</a>
   <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
 </div>
 
 <!-- ============ HERO ============ -->
@@ -486,23 +439,23 @@
   <div class="hero-content">
     <p class="eyebrow">Digital Products · Creative Content · Original Music</p>
     <h1>BLUSHAA <em>Studio</em></h1>
-    <p class="hero-desc">Beautiful digital products designed for students, creators, families, and anyone who loves creativity — made to download in seconds and use for years.</p>
+    <p class="hero-desc">A premium digital marketplace for planners, journals, templates, and creative downloads — designed in-house, delivered instantly, starting from just ₹199.</p>
     <div class="hero-buttons">
       <a href="#products" class="btn btn-primary">✨ Explore Products</a>
-      <a href="#youtube" class="btn btn-ghost">🎥 Watch YouTube</a>
-      <a href="#music" class="btn btn-ghost">🎵 Listen to Music</a>
+      <a href="https://www.youtube.com/@blushaatips" target="_blank" rel="noopener" class="btn btn-ghost">🎥 Watch YouTube</a>
+      <a href="https://www.youtube.com/channel/UCkgVsKNEY5GvboG-FAy8Lxw" target="_blank" rel="noopener" class="btn btn-ghost">🎵 Listen to Music</a>
     </div>
   </div>
 
   <div class="hero-collage" aria-hidden="true">
-    <div class="peek-card" style="background: linear-gradient(160deg, var(--blush), var(--cream));">
-      <svg viewBox="0 0 24 24" fill="none" stroke="var(--charcoal)" stroke-width="1.2"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
+    <div class="peek-card" style="--card-a: var(--blush); --card-b: var(--cream); background: linear-gradient(160deg, var(--blush), var(--cream));">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--charcoal)" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
     </div>
     <div class="peek-card" style="background: linear-gradient(160deg, var(--sage), var(--cream));">
-      <svg viewBox="0 0 24 24" fill="none" stroke="var(--charcoal)" stroke-width="1.2"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--charcoal)" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
     </div>
     <div class="peek-card" style="background: linear-gradient(160deg, var(--gold), var(--cream));">
-      <svg viewBox="0 0 24 24" fill="none" stroke="var(--charcoal)" stroke-width="1.2"><path d="M12 21s-7-4.5-9.3-9C1 7.8 3 4 6.7 4 9 4 11 5.6 12 7c1-1.4 3-3 5.3-3C21 4 23 7.8 21.3 12 19 16.5 12 21 12 21z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--charcoal)" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
     </div>
   </div>
 </section>
@@ -510,8 +463,8 @@
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Plan · Celebrate · Study · Organize · Create · Plan · Celebrate · Study · Organize · Create</span>
-    <span>Plan · Celebrate · Study · Organize · Create · Plan · Celebrate · Study · Organize · Create</span>
+    <span>Instant Download · Editable Templates · High Resolution · Lifetime Access · Instant Download · Editable Templates · High Resolution · Lifetime Access</span>
+    <span>Instant Download · Editable Templates · High Resolution · Lifetime Access · Instant Download · Editable Templates · High Resolution · Lifetime Access</span>
   </div>
 </div>
 
@@ -520,120 +473,154 @@
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Featured Digital Products</span>
-      <h2>Made to plan your days<br>and dress up your desktop.</h2>
-      <p>Every file is designed in-house, delivered instantly, and yours to print or use however you like — no shipping, no waiting.</p>
+      <h2>Handpicked from the shop.</h2>
+      <p>Every product is a digital download — a PDF or template file delivered straight to your inbox, nothing physical, nothing shipped.</p>
     </div>
 
     <div class="grid">
+
       <!-- Study Planners -->
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--blush), var(--cream));">
+        <!-- Replace this block with a real product cover image -->
+        <div class="card-preview" style="--card-a: var(--blush); --card-b: var(--cream);">
           <span class="card-tag">Planner</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Study Planners</span>
           <h3>The Focused Semester Set</h3>
           <p>Weekly and monthly spreads built for deadlines, reading lists, and late-night study sessions.</p>
-          <div class="card-foot"><span class="card-price">$14</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
 
       <!-- Matcha Milk Club -->
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--sage), var(--cream));">
+        <div class="card-preview" style="--card-a: var(--sage); --card-b: var(--cream);">
           <span class="card-tag">Journal</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><path d="M12 21s-7-4.5-9.3-9C1 7.8 3 4 6.7 4 9 4 11 5.6 12 7c1-1.4 3-3 5.3-3C21 4 23 7.8 21.3 12 19 16.5 12 21 12 21z"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Matcha Milk Club</span>
           <h3>Soft Mornings Journal</h3>
           <p>A dreamy daily journal with gentle prompts, habit trackers, and matcha-toned pages.</p>
-          <div class="card-foot"><span class="card-price">$9</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
 
       <!-- Baby Shower Templates -->
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--dusty), var(--cream));">
+        <div class="card-preview" style="--card-a: var(--dusty); --card-b: var(--cream);">
           <span class="card-tag">Templates</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><path d="M6 15a4 4 0 010-8 5 5 0 019.6-1.5A4.5 4.5 0 0118 15H6z"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Baby Shower Templates</span>
           <h3>Little Cloud Invitation Suite</h3>
           <p>Editable invites, thank-you cards, and signage in a soft, welcoming palette.</p>
-          <div class="card-foot"><span class="card-price">$12</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
 
       <!-- Wedding Templates -->
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--gold), var(--cream));">
+        <div class="card-preview" style="--card-a: var(--gold); --card-b: var(--cream);">
           <span class="card-tag">Templates</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><circle cx="8.5" cy="12" r="4.5"/><circle cx="15.5" cy="12" r="4.5"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Wedding Templates</span>
           <h3>Champagne Editorial Suite</h3>
           <p>Save-the-dates, menus, and seating charts in a quiet, editorial hand.</p>
-          <div class="card-foot"><span class="card-price">$22</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
 
       <!-- Coloring Books -->
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--blush), var(--sage));">
+        <div class="card-preview" style="--card-a: var(--blush); --card-b: var(--sage);">
           <span class="card-tag">Coloring Book</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><path d="M12 3c3 3 6 6.5 6 10a6 6 0 01-12 0c0-3.5 3-7 6-10z"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Coloring Books</span>
           <h3>Botanical Line Art Vol. 1</h3>
           <p>30 hand-illustrated botanical pages for slow, screen-free evenings.</p>
-          <div class="card-foot"><span class="card-price">$8</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
 
       <!-- Journals -->
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--cream), var(--dusty));">
+        <div class="card-preview" style="--card-a: var(--cream); --card-b: var(--dusty);">
           <span class="card-tag">Journal</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><path d="M5 4h11a2 2 0 012 2v13a2 2 0 00-2-1H5z"/><path d="M5 4a2 2 0 000 4"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Journals</span>
           <h3>Gratitude & Growth Journal</h3>
           <p>90 days of reflection prompts, mood tracking, and gentle check-ins.</p>
-          <div class="card-foot"><span class="card-price">$11</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
 
       <!-- Printable Bundles -->
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--sage), var(--gold));">
+        <div class="card-preview" style="--card-a: var(--sage); --card-b: var(--gold);">
           <span class="card-tag">Bundle</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Printable Bundles</span>
           <h3>The Whole Studio Bundle</h3>
           <p>Every planner, journal, and template collection — one link, lifetime access.</p>
-          <div class="card-foot"><span class="card-price">$59</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
 
       <!-- Worksheets -->
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--cream), var(--blush));">
+        <div class="card-preview" style="--card-a: var(--cream); --card-b: var(--blush);">
           <span class="card-tag">Worksheets</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><path d="M9 11l2 2 4-4"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Worksheets</span>
           <h3>Handwriting & Habit Sheets</h3>
           <p>Printable practice sheets for little hands and big goals alike.</p>
-          <div class="card-foot"><span class="card-price">$6</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
     </div>
@@ -658,49 +645,61 @@
   </div>
 </section>
 
-<!-- ============ NEW RELEASES ============ -->
+<!-- ============ NEW ARRIVALS ============ -->
 <section class="band" id="new">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Fresh From the Studio</span>
-      <h2>New Releases</h2>
-      <p>The newest additions to the shelf — small-batch drops, released a few times a month.</p>
+      <h2>New Arrivals</h2>
+      <p>The newest additions to the shop — small-batch drops, released a few times a month.</p>
     </div>
     <div class="grid">
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--gold), var(--blush));">
+        <div class="card-preview" style="--card-a: var(--gold); --card-b: var(--blush);">
           <span class="card-tag new">New</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Study Planners</span>
           <h3>Golden Hour Undated Planner</h3>
           <p>A twelve-month undated layout, start any day of the year.</p>
-          <div class="card-foot"><span class="card-price">$16</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--sage), var(--blush));">
+        <div class="card-preview" style="--card-a: var(--sage); --card-b: var(--blush);">
           <span class="card-tag new">New</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><path d="M12 3c3 3 6 6.5 6 10a6 6 0 01-12 0c0-3.5 3-7 6-10z"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Coloring Books</span>
           <h3>Quiet Garden Coloring Set</h3>
           <p>Twenty-four botanical scenes inspired by early spring gardens.</p>
-          <div class="card-foot"><span class="card-price">$7</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--dusty), var(--gold));">
+        <div class="card-preview" style="--card-a: var(--dusty); --card-b: var(--gold);">
           <span class="card-tag new">New</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><circle cx="8.5" cy="12" r="4.5"/><circle cx="15.5" cy="12" r="4.5"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Wedding Templates</span>
           <h3>Ivory & Sage Wedding Suite</h3>
-          <p>A full editable stationery set for garden and courthouse weddings alike.</p>
-          <div class="card-foot"><span class="card-price">$24</span><a href="#" class="card-dl">Download ↓</a></div>
+          <p>A full editable stationery suite for garden and courthouse weddings alike.</p>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
     </div>
@@ -717,39 +716,51 @@
     </div>
     <div class="grid">
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--blush), var(--dusty));">
+        <div class="card-preview" style="--card-a: var(--blush); --card-b: var(--dusty);">
           <span class="card-rank">01</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Study Planners</span>
           <h3>The Focused Semester Set</h3>
           <p>Our most-downloaded planner, three semesters running.</p>
-          <div class="card-foot"><span class="card-price">$14</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--sage), var(--cream));">
+        <div class="card-preview" style="--card-a: var(--sage); --card-b: var(--cream);">
           <span class="card-rank">02</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><path d="M5 4h11a2 2 0 012 2v13a2 2 0 00-2-1H5z"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Journals</span>
           <h3>Gratitude & Growth Journal</h3>
           <p>A community favorite for its calm layout and gentle prompts.</p>
-          <div class="card-foot"><span class="card-price">$11</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
       <div class="card reveal">
-        <div class="card-preview" style="background:linear-gradient(150deg, var(--gold), var(--cream));">
+        <div class="card-preview" style="--card-a: var(--gold); --card-b: var(--cream);">
           <span class="card-rank">03</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mocha)" stroke-width="1.1"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-6 6"/></svg>
+            <span>Product Image</span>
+          </div>
         </div>
         <div class="card-body">
           <span class="card-cat">Printable Bundles</span>
           <h3>The Whole Studio Bundle</h3>
           <p>Everything in one download — the best value in the shop.</p>
-          <div class="card-foot"><span class="card-price">$59</span><a href="#" class="card-dl">Download ↓</a></div>
+          <div class="card-price">Starting from ₹199</div>
+          <div class="card-foot"><a href="#" class="buy-now">Buy Now</a></div>
         </div>
       </div>
     </div>
@@ -764,12 +775,12 @@
       <h2>Find what you're looking for</h2>
     </div>
     <div class="cat-grid reveal">
-      <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/></svg><span>Study Planners</span></div>
+      <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12h8M12 8v8"/></svg><span>Study Planners</span></div>
       <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-4.5-9.3-9C1 7.8 3 4 6.7 4 9 4 11 5.6 12 7c1-1.4 3-3 5.3-3C21 4 23 7.8 21.3 12 19 16.5 12 21 12 21z"/></svg><span>Matcha Milk Club</span></div>
-      <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 15a4 4 0 010-8 5 5 0 019.6-1.5A4.5 4.5 0 0118 15H6z"/></svg><span>Baby Shower</span></div>
+      <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><span>Baby Shower</span></div>
       <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="8.5" cy="12" r="4.5"/><circle cx="15.5" cy="12" r="4.5"/></svg><span>Wedding</span></div>
       <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c3 3 6 6.5 6 10a6 6 0 01-12 0c0-3.5 3-7 6-10z"/></svg><span>Coloring Books</span></div>
-      <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 4h11a2 2 0 012 2v13a2 2 0 00-2-1H5z"/></svg><span>Journals</span></div>
+      <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/></svg><span>Journals</span></div>
       <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg><span>Bundles</span></div>
       <div class="cat-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 11l2 2 4-4"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg><span>Worksheets</span></div>
     </div>
@@ -780,8 +791,8 @@
 <section class="band" id="about" style="background: var(--cream);">
   <div class="wrap about">
     <div class="about-visual reveal">
-      <div class="ab-block ab1" style="position:absolute; width:72%; height:72%; top:0; left:0; border-radius:28px; background:linear-gradient(150deg, var(--dusty), var(--blush)); box-shadow: var(--shadow-soft);"></div>
-      <div class="ab-block ab2" style="position:absolute; width:52%; height:52%; bottom:0; right:0; border-radius:28px; background:linear-gradient(150deg, var(--sage), var(--cream)); box-shadow: var(--shadow-soft); border:6px solid var(--ivory);"></div>
+      <div class="ab-block ab1"></div>
+      <div class="ab-block ab2"></div>
       <div class="ab-quote">"Design should feel like a deep breath."</div>
     </div>
     <div class="about-text reveal">
@@ -820,7 +831,7 @@
         <div class="yt-info"><h4>A Week in the Studio</h4><span>Behind the Scenes · 9 min</span></div>
       </div>
     </div>
-    <div class="section-foot reveal"><a href="#" class="btn btn-primary" style="background:var(--gold); color:var(--charcoal);">🎥 Visit the Channel</a></div>
+    <div class="section-foot reveal"><a href="https://www.youtube.com/@blushaatips" target="_blank" rel="noopener" class="btn btn-primary" style="background:var(--gold); color:var(--charcoal);">🎥 Visit the Channel</a></div>
   </div>
 </section>
 
@@ -839,7 +850,7 @@
         <div class="track"><span class="track-num">02</span><div class="track-name"><strong>Matcha Light</strong><span>Lo-fi · Instrumental</span></div><span class="track-len">2:48</span></div>
         <div class="track"><span class="track-num">03</span><div class="track-name"><strong>Golden Hour</strong><span>Piano · Ambient</span></div><span class="track-len">4:05</span></div>
       </div>
-      <a href="#" class="btn btn-primary" style="margin-top:30px;">🎵 Listen on Spotify</a>
+      <a href="https://www.youtube.com/channel/UCkgVsKNEY5GvboG-FAy8Lxw" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:30px;">🎵 Listen on YouTube</a>
     </div>
   </div>
 </section>
@@ -862,7 +873,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Can I print these at home? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="faq-a"><p>Yes — every file is formatted for standard home and office printers, at both US Letter and A4 sizes.</p></div>
+        <div class="faq-a"><p>Yes — every file is formatted for standard home and office printers, at both A4 and US Letter sizes.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Are files licensed for personal use only? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
@@ -876,14 +887,26 @@
   </div>
 </section>
 
-<!-- ============ NEWSLETTER ============ -->
-<section class="band" style="background: var(--cream); padding-bottom: 140px;">
-  <div class="wrap">
+<!-- ============ CONTACT + NEWSLETTER ============ -->
+<section class="band" id="contact" style="background: var(--cream); padding-bottom: 140px;">
+  <div class="wrap contact-inner">
+    <div class="reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 style="font-size:clamp(1.9rem,3vw,2.6rem); margin:14px 0 16px;">Say hello.</h2>
+      <p style="color:var(--ink-soft); max-width:420px; margin-bottom:22px;">Questions about a product, a license, or a collab idea — we read every message.</p>
+      <a href="mailto:hello@blushaastudio.com" class="btn-line">hello@blushaastudio.com <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <div class="contact-social">
+        <a href="https://www.instagram.com/shopdraftco/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://in.pinterest.com/Disha_Bhatt1/" target="_blank" rel="noopener" aria-label="Pinterest"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 17c1-3 1.5-5 1.5-5m0 0C10 9 11 8 12.5 8c2 0 3 1.5 2.5 3.5-.4 1.7-1.5 3-3 3-1 0-1.5-.6-1.5-.6"/></svg></a>
+        <a href="https://www.youtube.com/@blushaatips" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l6 3-6 3z"/></svg></a>
+      </div>
+    </div>
+
     <div class="newsletter-card reveal">
       <span class="eyebrow">Join the Studio Letter</span>
       <h2 style="margin-top:14px;">New releases, first.</h2>
       <p>A quiet, occasional email — new drops, freebies, and a peek behind the scenes. No spam, ever.</p>
-      <form class="nl-form" onsubmit="event.preventDefault(); this.querySelector('button')?.remove(); this.innerHTML='<p style=\'color:var(--mocha); font-weight:600;\'>You\'re on the list — welcome to BLUSHAA.</p>';">
+      <form class="nl-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'color:var(--mocha); font-weight:600;\'>You\'re on the list — welcome to BLUSHAA.</p>';">
         <input type="email" placeholder="you@email.com" required aria-label="Email address">
         <button class="btn btn-primary" type="submit">Subscribe</button>
       </form>
@@ -900,16 +923,16 @@
         <h3>BLUSHAA Studio</h3>
         <p>Digital products, creative content, and original music — designed to make everyday moments a little more beautiful.</p>
         <div class="foot-social">
-          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l6 3-6 3z"/></svg></a>
-          <a href="#" aria-label="Pinterest"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 17c1-3 1.5-5 1.5-5m0 0C10 9 11 8 12.5 8c2 0 3 1.5 2.5 3.5-.4 1.7-1.5 3-3 3-1 0-1.5-.6-1.5-.6"/></svg></a>
+          <a href="https://www.instagram.com/shopdraftco/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://www.youtube.com/@blushaatips" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l6 3-6 3z"/></svg></a>
+          <a href="https://in.pinterest.com/Disha_Bhatt1/" target="_blank" rel="noopener" aria-label="Pinterest"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 17c1-3 1.5-5 1.5-5m0 0C10 9 11 8 12.5 8c2 0 3 1.5 2.5 3.5-.4 1.7-1.5 3-3 3-1 0-1.5-.6-1.5-.6"/></svg></a>
         </div>
       </div>
       <div class="foot-col">
         <h5>Shop</h5>
         <ul>
           <li><a href="#products">Featured Products</a></li>
-          <li><a href="#new">New Releases</a></li>
+          <li><a href="#new">New Arrivals</a></li>
           <li><a href="#bestsellers">Best Sellers</a></li>
           <li><a href="#categories">Categories</a></li>
         </ul>
@@ -918,15 +941,15 @@
         <h5>Studio</h5>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#youtube">YouTube</a></li>
-          <li><a href="#music">Music</a></li>
+          <li><a href="https://www.youtube.com/@blushaatips" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.youtube.com/channel/UCkgVsKNEY5GvboG-FAy8Lxw" target="_blank" rel="noopener">Music</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h5>Support</h5>
         <ul>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><a href="#">License Terms</a></li>
           <li><a href="#">Privacy Policy</a></li>
         </ul>
@@ -940,13 +963,9 @@
 </footer>
 
 <script>
-  // Nav scroll state
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  });
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
 
-  // Mobile menu
   const navToggle = document.getElementById('navToggle');
   const mobileMenu = document.getElementById('mobileMenu');
   navToggle.addEventListener('click', () => {
@@ -958,19 +977,14 @@
     mobileMenu.classList.remove('open');
   }));
 
-  // Scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
-      }
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   revealEls.forEach(el => io.observe(el));
 
-  // FAQ accordion
   document.querySelectorAll('.faq-item').forEach(item => {
     const q = item.querySelector('.faq-q');
     const a = item.querySelector('.faq-a');
@@ -980,10 +994,7 @@
         other.classList.remove('open');
         other.querySelector('.faq-a').style.maxHeight = null;
       });
-      if (!isOpen) {
-        item.classList.add('open');
-        a.style.maxHeight = a.scrollHeight + 'px';
-      }
+      if (!isOpen) { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
     });
   });
 </script>
